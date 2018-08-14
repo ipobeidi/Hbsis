@@ -1,0 +1,83 @@
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding: 5px;
+    text-align: left;
+  }
+</style>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  
+  <title>Livraria</title>
+</head>
+<h2>Livraria</h2>
+
+<body ng-app="Livraria">
+  <div ng-controller="LivrariaController as Liv" ng-init="Liv.init()">
+    <form name="incluirForm"  ng-submit="Liv.salvar(incluirForm.$valid)" novalidate>
+      <label>Nome:
+        <input type="text" ng-model="Liv.Livro.Nome" required />
+      </label>
+      <br />
+      <label>Autor:
+        <input type="text" ng-model="Liv.Livro.Autor" equired />
+      </label>
+      <br /> Ano:
+      <label>
+        <input type="text" ng-model="Liv.Livro.Ano" required maxlength="4" />
+      </label>
+      <br />
+      <input type="submit" value="{{!Liv.hasEditar ? 'Incluir' : 'Editar'}}">
+    </form>
+
+    <table cellspacing="0" cellpadding="0" ng-show="Liv.acoLivros.length > 0">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Autor</th>
+          <th>Ano</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="livro in Liv.acoLivros track by $id(livro)">
+        <tr>
+          <td>
+            <span ng-bind="livro.Nome"></span>
+          </td>
+          <td>
+            <span ng-bind="livro.Autor"></span>
+          </td>
+          <td>
+            <span ng-bind="livro.Ano"></span>
+          </td>
+          <td>
+            <button type="button" value="Editar" ng-click="Liv.editar(livro)" >Editar</button>
+
+            <button type="button" value="Excluir" ng-click="Liv.excluir(livro)">Excluir</button>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
+<script src="./app/js/angular.min.js"></script>
+<script src="./app/app.js"></script>
+<script src="./app/config/LivrariaConfig.js"></script>
+<script src="./app/factorys/Interceptor/UrlInterceptor.js"></script>
+<script src="./app/factorys/Interceptor/MessageListInterceptor.js"></script>
+<script src="./app/config/HttpProviderConfig.js"></script>
+<script src="./app/services/LivrariaService.js"></script>
+<script src="./app/controllers/LivrariaController.js"></script>

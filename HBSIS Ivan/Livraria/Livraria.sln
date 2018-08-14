@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livraria", "Livraria\Livraria.csproj", "{F3AF03E4-90AE-4914-8017-10468BD2FB0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivrariaTeste", "LivrariaTeste\LivrariaTeste.csproj", "{9A1A96B7-6DBC-45AD-8638-CB91AF9497F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3AF03E4-90AE-4914-8017-10468BD2FB0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3AF03E4-90AE-4914-8017-10468BD2FB0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3AF03E4-90AE-4914-8017-10468BD2FB0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3AF03E4-90AE-4914-8017-10468BD2FB0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A1A96B7-6DBC-45AD-8638-CB91AF9497F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A1A96B7-6DBC-45AD-8638-CB91AF9497F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A1A96B7-6DBC-45AD-8638-CB91AF9497F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A1A96B7-6DBC-45AD-8638-CB91AF9497F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05267FA2-0349-4927-BD6F-854CC850513D}
+	EndGlobalSection
+EndGlobal
